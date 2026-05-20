@@ -1,3 +1,1834 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LockLink | Private Pay-to-Unlock Digital Delivery</title>
+  <meta name="title" content="LockLink | Private Pay-to-Unlock Digital Delivery" />
+  <meta name="description" content="Create private pay-to-unlock delivery links for digital work. Secure delivery infrastructure for freelancers and digital creators." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://locklink.net/" />
+  <meta property="og:title" content="LockLink | Private Pay-to-Unlock Digital Delivery" />
+  <meta property="og:description" content="Create private pay-to-unlock delivery links for digital work. Secure delivery infrastructure for freelancers and digital creators." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_AR" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="https://locklink.net/" />
+  <meta name="twitter:title" content="LockLink | Private Pay-to-Unlock Digital Delivery" />
+  <meta name="twitter:description" content="Create private pay-to-unlock delivery links for digital work." />
+
+  <link rel="canonical" href="https://locklink.net/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --emerald: 52 211 153;
+      --teal: 20 184 166;
+      --slate: 15 23 42;
+      --dark: 2 6 23;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      position: relative;
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 500;
+      background: rgb(2 6 23);
+      color: #fff;
+    }
+
+    body.lang-ar {
+      font-family: Amiri, serif;
+    }
+
+    main,
+    header,
+    footer,
+    section,
+    nav,
+    aside,
+    div,
+    article,
+    form {
+      max-width: 100%;
+    }
+
+    img,
+    svg,
+    video,
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a,
+    button,
+    input,
+    select,
+    textarea {
+      max-width: 100%;
+    }
+
+    select {
+      color: #fff !important;
+      background-color: #0f172a !important;
+    }
+
+    select option {
+      color: #fff !important;
+      background-color: #0f172a !important;
+    }
+
+    body.lang-ar .tracking-tight,
+    body.lang-ar .tracking-widest,
+    body.lang-ar .tracking-\[0\.22em\] {
+      letter-spacing: normal !important;
+    }
+
+    [dir="rtl"] .rtl-row {
+      flex-direction: row-reverse;
+    }
+
+    [dir="rtl"] .rtl-text-right {
+      text-align: right;
+    }
+
+    [dir="rtl"] .rtl-text-left {
+      text-align: left;
+    }
+
+    .safe-wrap,
+    .safe-grid,
+    .safe-flex,
+    .glass,
+    .card {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .soft-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(circle at center, black, transparent 72%);
+      -webkit-mask-image: radial-gradient(circle at center, black, transparent 72%);
+    }
+
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      width: 0;
+      height: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.22);
+      transform: translate(-50%, -50%);
+      transition: width 0.55s ease, height 0.55s ease;
+    }
+
+    .btn-primary:hover::before {
+      width: 320px;
+      height: 320px;
+    }
+
+    .skip-to-main {
+      position: absolute;
+      left: -9999px;
+      z-index: 999;
+      padding: 1rem 1.5rem;
+      background: rgb(52 211 153);
+      color: rgb(2 6 23);
+      font-weight: 800;
+      border-radius: 0.75rem;
+    }
+
+    .skip-to-main:focus {
+      left: 1rem;
+      top: 1rem;
+    }
+
+    *:focus-visible {
+      outline: 2px solid rgb(52 211 153);
+      outline-offset: 2px;
+      border-radius: 0.6rem;
+    }
+
+    section[id] {
+      scroll-margin-top: 5rem;
+    }
+
+    .mobile-menu {
+      right: 0;
+      left: auto;
+      transform: translateX(100%);
+      transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      max-width: 84vw;
+      overflow-x: hidden;
+    }
+
+    html[dir="rtl"] .mobile-menu {
+      right: auto;
+      left: 0;
+      border-left: 0;
+      border-right: 1px solid rgba(255,255,255,0.10);
+      transform: translateX(-100%);
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-overlay {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 300ms ease;
+    }
+
+    .mobile-menu-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .spinner {
+      animation: spin 1s linear infinite;
+    }
+
+    @media (max-width: 640px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        touch-action: pan-y;
+      }
+
+      .container-pad {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .mobile-stack {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+
+      .mobile-flex-stack {
+        flex-direction: column !important;
+      }
+
+      .mobile-full {
+        width: 100% !important;
+      }
+
+      .mobile-center {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      #hero-title {
+        font-size: clamp(2.75rem, 12vw, 4rem);
+        line-height: 1.04;
+      }
+
+      html[dir="rtl"] #hero-title {
+        font-size: clamp(2.25rem, 10vw, 3rem);
+        line-height: 1.18;
+      }
+
+      html[dir="rtl"] h1,
+      html[dir="rtl"] h2,
+      html[dir="rtl"] h3,
+      html[dir="rtl"] p,
+      html[dir="rtl"] a,
+      html[dir="rtl"] span,
+      html[dir="rtl"] button,
+      html[dir="rtl"] div {
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
+
+      html[dir="rtl"] .rtl-mobile-right {
+        text-align: right;
+      }
+
+      html[dir="rtl"] .rtl-mobile-center {
+        text-align: center;
+      }
+
+      html[dir="rtl"] .mobile-menu-link {
+        text-align: right;
+      }
+
+      .demo-top {
+        align-items: flex-start;
+      }
+
+      .demo-status {
+        min-width: fit-content;
+      }
+
+      .file-info-row {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .file-info-row > span {
+        max-width: 100%;
+      }
+
+      #languageSelector {
+        width: 118px;
+        max-width: 118px;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+    }
+
+    @media (max-width: 430px) {
+      header .header-inner {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        gap: 0.75rem !important;
+      }
+
+      .logo-icon {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        border-radius: 1rem !important;
+      }
+
+      .logo-tagline {
+        display: none !important;
+      }
+
+      #languageSelector {
+        width: 106px;
+        max-width: 106px;
+        font-size: 0.78rem;
+      }
+
+      #mobileMenuBtn {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      .mobile-menu {
+        width: min(20rem, 84vw);
+        max-width: 84vw;
+      }
+
+      .hero-actions a {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 370px) {
+      header .header-inner {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+      }
+
+      #languageSelector {
+        width: 96px;
+        max-width: 96px;
+      }
+
+      .logo-word {
+        font-size: 1.05rem !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-white antialiased">
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <div class="pointer-events-none fixed inset-0 -z-20 bg-slate-950" aria-hidden="true"></div>
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.18),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.13),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(20,184,166,0.12),transparent_28%)]" aria-hidden="true"></div>
+
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl" role="banner">
+    <div class="header-inner safe-wrap mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
+      <a href="index.html" class="safe-flex group flex min-w-0 items-center gap-3 rtl-row" aria-label="LockLink Home">
+        <div class="logo-icon relative flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-300 to-teal-500 text-slate-950 shadow-lg shadow-emerald-950/40 transition-transform group-hover:scale-105">
+          <span class="text-lg font-black" aria-hidden="true">L</span>
+          <span class="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-slate-950 bg-white" aria-hidden="true"></span>
+        </div>
+
+        <div class="min-w-0 leading-none rtl-text-right">
+          <div class="logo-word text-xl font-black tracking-tight">
+            Lock<span class="text-emerald-300">Link</span>
+          </div>
+          <div class="logo-tagline mt-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+            Secure Delivery
+          </div>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex" role="navigation" aria-label="Main navigation">
+        <a href="#instant-deal" class="transition hover:text-white focus:text-white" data-i18n="navInstant">Instant Deal</a>
+        <a href="#how-it-works" class="transition hover:text-white focus:text-white" data-i18n="navHow">How it works</a>
+        <a href="#security" class="transition hover:text-white focus:text-white" data-i18n="navSecurity">Security</a>
+        <a href="#pricing" class="transition hover:text-white focus:text-white" data-i18n="navPricing">Pricing</a>
+      </nav>
+
+      <div class="safe-flex flex shrink-0 items-center gap-3 rtl-row">
+        <select
+          id="languageSelector"
+          class="h-10 rounded-full border border-white/15 bg-slate-900 px-4 text-sm font-semibold text-white outline-none transition hover:bg-white/10 focus:ring-2 focus:ring-emerald-400"
+          aria-label="Select language"
+        >
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="pt">Português</option>
+        </select>
+
+        <a
+          href="#early-access"
+          class="hidden h-10 items-center rounded-full bg-white px-5 text-sm font-bold text-slate-950 transition hover:bg-emerald-300 focus:ring-4 focus:ring-emerald-400/50 active:scale-95 sm:inline-flex"
+          data-i18n="joinEarly"
+        >
+          Join early access
+        </a>
+
+        <button
+          id="mobileMenuBtn"
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-slate-900 text-white transition hover:bg-white/10 lg:hidden"
+          aria-label="Open mobile menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div
+    id="mobileMenuOverlay"
+    class="mobile-menu-overlay fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+    aria-hidden="true"
+  ></div>
+
+  <aside
+    id="mobileMenu"
+    class="mobile-menu fixed top-0 z-50 h-full w-80 overflow-x-hidden border-l border-white/10 bg-slate-950 shadow-2xl lg:hidden"
+    role="dialog"
+    aria-label="Mobile navigation"
+    aria-modal="true"
+  >
+    <div class="flex h-full flex-col">
+      <div class="safe-flex flex items-center justify-between gap-4 border-b border-white/10 p-6">
+        <div class="text-lg font-black">
+          Lock<span class="text-emerald-300">Link</span>
+        </div>
+
+        <button
+          id="closeMobileMenuBtn"
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-slate-900 text-white transition hover:bg-white/10"
+          aria-label="Close mobile menu"
+        >
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex-1 overflow-y-auto p-6" role="navigation" aria-label="Mobile navigation">
+        <div class="space-y-2">
+          <a href="#instant-deal" class="mobile-menu-link block rounded-2xl border border-transparent px-4 py-3 text-base font-medium text-slate-300 transition hover:border-white/10 hover:bg-white/5 hover:text-white" data-i18n="navInstant">Instant Deal</a>
+          <a href="#how-it-works" class="mobile-menu-link block rounded-2xl border border-transparent px-4 py-3 text-base font-medium text-slate-300 transition hover:border-white/10 hover:bg-white/5 hover:text-white" data-i18n="navHow">How it works</a>
+          <a href="#security" class="mobile-menu-link block rounded-2xl border border-transparent px-4 py-3 text-base font-medium text-slate-300 transition hover:border-white/10 hover:bg-white/5 hover:text-white" data-i18n="navSecurity">Security</a>
+          <a href="#pricing" class="mobile-menu-link block rounded-2xl border border-transparent px-4 py-3 text-base font-medium text-slate-300 transition hover:border-white/10 hover:bg-white/5 hover:text-white" data-i18n="navPricing">Pricing</a>
+        </div>
+      </nav>
+
+      <div class="border-t border-white/10 p-6">
+        <a href="#early-access" class="mobile-menu-link block w-full rounded-2xl bg-emerald-400 py-4 text-center font-bold text-slate-950 transition hover:bg-emerald-300 active:scale-95" data-i18n="joinEarly">
+          Join early access
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <section class="relative overflow-hidden" aria-labelledby="hero-title">
+      <div class="soft-grid absolute inset-0 -z-10 opacity-70" aria-hidden="true"></div>
+
+      <div class="safe-wrap container-pad mx-auto grid max-w-7xl items-center gap-14 px-6 py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.88fr)] lg:py-28">
+        <div class="min-w-0 rtl-mobile-right">
+          <div class="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-300" role="status">
+            <span class="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald-300" aria-hidden="true"></span>
+            <span class="min-w-0" data-i18n="heroBadge">Private instant deals for digital work</span>
+          </div>
+
+          <h1 id="hero-title" class="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight md:text-6xl lg:text-7xl" data-i18n="heroTitle">
+            Create a private pay-to-unlock delivery link.
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl" data-i18n="heroSubtitle">
+            LockLink helps freelancers and digital creators deliver already-agreed digital work through private links. The buyer reviews a protected preview, pays online, and the original file unlocks after payment.
+          </p>
+
+          <div class="hero-actions mt-10 flex flex-col gap-4 sm:flex-row rtl-row">
+            <a
+              href="#early-access"
+              class="btn-primary rounded-full bg-emerald-400 px-8 py-4 text-center text-base font-black text-slate-950 shadow-lg shadow-emerald-950/40 transition hover:bg-emerald-300 focus:ring-4 focus:ring-emerald-400/50 active:scale-95"
+              data-i18n="joinEarly"
+            >
+              Join early access
+            </a>
+
+            <a
+              href="#how-it-works"
+              class="rounded-full border border-white/15 bg-white/5 px-8 py-4 text-center text-base font-bold text-white transition hover:bg-white/10 focus:ring-4 focus:ring-white/20 active:scale-95"
+              data-i18n="seeHow"
+            >
+              See how it works
+            </a>
+          </div>
+
+          <div class="safe-grid mt-8 grid max-w-2xl gap-3 text-sm text-slate-400 sm:grid-cols-3" role="list">
+            <div class="card rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:bg-white/[0.06]" role="listitem">
+              <p class="font-bold text-white" data-i18n="metric1Title">Private links</p>
+              <p class="mt-1" data-i18n="metric1Text">No public marketplace</p>
+            </div>
+
+            <div class="card rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:bg-white/[0.06]" role="listitem">
+              <p class="font-bold text-white" data-i18n="metric2Title">Protected preview</p>
+              <p class="mt-1" data-i18n="metric2Text">Original stays locked</p>
+            </div>
+
+            <div class="card rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:bg-white/[0.06]" role="listitem">
+              <p class="font-bold text-white" data-i18n="metric3Title">Instant unlock</p>
+              <p class="mt-1" data-i18n="metric3Text">After payment</p>
+            </div>
+          </div>
+
+          <p class="mt-6 max-w-2xl text-sm leading-6 text-slate-500" data-i18n="heroNotice">
+            LockLink is not an escrow service, dispute service, or public marketplace. It provides private digital delivery infrastructure.
+          </p>
+        </div>
+
+        <div class="glass mobile-center rounded-[2rem] p-4 transition hover:shadow-2xl md:p-6" role="region" aria-label="Demo interface">
+          <div class="card rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5 md:p-6">
+            <div class="demo-top mb-6 flex items-start justify-between gap-4 rtl-row">
+              <div class="min-w-0 rtl-text-right">
+                <div class="mb-2 inline-flex rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-bold text-emerald-300" data-i18n="demoType">
+                  Instant Deal
+                </div>
+
+                <h2 class="text-2xl font-black tracking-tight" data-i18n="demoTitle">Digital Project Delivery</h2>
+
+                <p class="mt-2 text-sm text-slate-400">
+                  <span data-i18n="dealId">Deal ID</span>: <span class="font-semibold text-slate-200">LL-8429X</span>
+                </p>
+              </div>
+
+              <div class="demo-status shrink-0 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-right rtl-text-left">
+                <p class="text-xs font-bold uppercase tracking-widest text-emerald-300" data-i18n="status">Status</p>
+                <p class="mt-1 font-black text-white" data-i18n="locked">Locked</p>
+              </div>
+            </div>
+
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-white/20">
+              <div class="safe-flex mb-3 flex items-center justify-between gap-3 rtl-row">
+                <p class="text-sm font-bold text-slate-300" data-i18n="protectedPreview">Protected preview</p>
+                <p class="shrink-0 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-400" data-i18n="previewSafe">Safe preview</p>
+              </div>
+
+              <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800 to-slate-950 p-6">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.18),transparent_40%)]" aria-hidden="true"></div>
+
+                <div class="relative">
+                  <div class="mb-5 grid grid-cols-3 gap-3 opacity-80" aria-hidden="true">
+                    <div class="h-16 animate-pulse rounded-2xl bg-white/10"></div>
+                    <div class="h-16 animate-pulse rounded-2xl bg-white/10" style="animation-delay: 100ms;"></div>
+                    <div class="h-16 animate-pulse rounded-2xl bg-white/10" style="animation-delay: 200ms;"></div>
+                  </div>
+
+                  <div class="rounded-2xl border border-dashed border-emerald-300/30 bg-emerald-400/10 p-5 text-center">
+                    <p class="text-xs font-black uppercase tracking-[0.22em] text-emerald-300" data-i18n="projectPreview">Project Preview</p>
+                    <p class="mt-2 text-2xl font-black text-white" data-i18n="previewLocked">Original file locked</p>
+                    <p class="mt-2 text-xs leading-5 text-slate-400" data-i18n="previewNote">
+                      Watermarked or limited preview only. The original package unlocks after payment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="safe-grid mobile-stack mt-4 grid grid-cols-2 gap-4">
+              <div class="card rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-white/20">
+                <p class="text-sm text-slate-400" data-i18n="dealPrice">Deal price</p>
+                <p class="mt-1 text-3xl font-black">$100</p>
+              </div>
+
+              <div class="card rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-white/20">
+                <p class="text-sm text-slate-400" data-i18n="reviewWindow">Review window</p>
+                <p class="mt-1 text-3xl font-black">72h</p>
+              </div>
+            </div>
+
+            <div class="card mt-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-white/20">
+              <div class="file-info-row flex min-w-0 items-center justify-between gap-4 text-sm rtl-row">
+                <span class="text-slate-400" data-i18n="fileInfo">File info</span>
+                <span class="font-semibold text-white" data-i18n="fileInfoValue">Encrypted package · 128 MB</span>
+              </div>
+            </div>
+
+            <button
+              class="btn-primary mt-4 w-full rounded-2xl bg-emerald-400 px-6 py-4 font-black text-slate-950 shadow-lg shadow-emerald-950/40 transition hover:bg-emerald-300 focus:ring-4 focus:ring-emerald-400/50 active:scale-95"
+              data-i18n="payUnlock"
+              aria-label="Pay to unlock original file"
+            >
+              Pay to unlock original file
+            </button>
+
+            <p class="mt-4 text-center text-xs leading-5 text-slate-500" data-i18n="demoPaymentNote">
+              Demo interface. Payment processing will be enabled after launch.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instant-deal" class="border-y border-white/10 bg-slate-900/55 py-24" aria-labelledby="instant-deal-title">
+      <div class="container-pad safe-wrap mx-auto max-w-7xl px-6">
+        <div class="safe-grid grid gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1fr)] lg:items-center">
+          <div class="min-w-0 rtl-mobile-right">
+            <p class="mb-3 text-sm font-black uppercase tracking-widest text-emerald-300" data-i18n="instantLabel">Instant Deal</p>
+            <h2 id="instant-deal-title" class="text-4xl font-black tracking-tight md:text-5xl" data-i18n="instantTitle">
+              A private delivery workflow for already-agreed digital work.
+            </h2>
+            <p class="mt-5 text-lg leading-8 text-slate-300" data-i18n="instantText">
+              LockLink is designed for deals that were discussed outside the platform. We provide the secure delivery layer: private link, protected preview, payment confirmation, and controlled unlock.
+            </p>
+          </div>
+
+          <div class="safe-grid grid gap-4 sm:grid-cols-2" role="list">
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <p class="mb-3 text-3xl" aria-hidden="true">🔒</p>
+              <h3 class="text-xl font-black" data-i18n="doesTitle1">Private deal page</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="does1">Creates a private delivery page for one file and one agreed deal.</p>
+            </div>
+
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <p class="mb-3 text-3xl" aria-hidden="true">🧩</p>
+              <h3 class="text-xl font-black" data-i18n="doesTitle2">Protected preview</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="does2">Shows only a limited preview or safe metadata before checkout.</p>
+            </div>
+
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <p class="mb-3 text-3xl" aria-hidden="true">⚡</p>
+              <h3 class="text-xl font-black" data-i18n="doesTitle3">Payment unlock</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="does3">Unlocks access after payment confirmation from the payment provider.</p>
+            </div>
+
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <p class="mb-3 text-3xl" aria-hidden="true">⏱️</p>
+              <h3 class="text-xl font-black" data-i18n="doesTitle4">Auto-expiry</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="does4">Expires unpaid deals automatically after the review window.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="py-24" aria-labelledby="how-it-works-title">
+      <div class="container-pad safe-wrap mx-auto max-w-7xl px-6">
+        <div class="mx-auto max-w-3xl text-center rtl-mobile-center">
+          <p class="mb-3 text-sm font-black uppercase tracking-widest text-emerald-300" data-i18n="howLabel">How it works</p>
+          <h2 id="how-it-works-title" class="text-4xl font-black tracking-tight md:text-5xl" data-i18n="howTitle">Simple on the screen. Secure behind the scenes.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-300" data-i18n="howText">
+            Sellers and buyers get a clean flow. LockLink handles protection, expiry, and unlock logic in the background.
+          </p>
+        </div>
+
+        <div class="safe-grid mt-14 grid gap-6 md:grid-cols-3" role="list">
+          <div class="card rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400 text-xl font-black text-slate-950 shadow-lg shadow-emerald-950/30" aria-label="Step 1">1</div>
+            <h3 class="text-2xl font-black" data-i18n="step1Title">Seller creates</h3>
+            <p class="mt-4 leading-7 text-slate-400" data-i18n="step1Text">
+              The seller uploads the completed file, adds deal details, sets the price, and accepts the content responsibility agreement.
+            </p>
+          </div>
+
+          <div class="card rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400 text-xl font-black text-slate-950 shadow-lg shadow-emerald-950/30" aria-label="Step 2">2</div>
+            <h3 class="text-2xl font-black" data-i18n="step2Title">Buyer reviews</h3>
+            <p class="mt-4 leading-7 text-slate-400" data-i18n="step2Text">
+              The buyer opens the private link and reviews the deal information, protected preview, price, and expiry time before payment.
+            </p>
+          </div>
+
+          <div class="card rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400 text-xl font-black text-slate-950 shadow-lg shadow-emerald-950/30" aria-label="Step 3">3</div>
+            <h3 class="text-2xl font-black" data-i18n="step3Title">File unlocks</h3>
+            <p class="mt-4 leading-7 text-slate-400" data-i18n="step3Text">
+              After successful payment, the original file unlocks through a secure access page for a limited period.
+            </p>
+          </div>
+        </div>
+
+        <div class="safe-grid mt-8 grid gap-4 rounded-[2rem] border border-white/10 bg-slate-900/70 p-5 md:grid-cols-4" role="list">
+          <div class="card rounded-2xl bg-white/[0.04] p-5 transition hover:bg-white/[0.06]" role="listitem">
+            <p class="text-sm text-slate-400" data-i18n="ruleReview">Review window</p>
+            <p class="mt-2 text-3xl font-black">72h</p>
+          </div>
+
+          <div class="card rounded-2xl bg-white/[0.04] p-5 transition hover:bg-white/[0.06]" role="listitem">
+            <p class="text-sm text-slate-400" data-i18n="ruleAccess">Download access</p>
+            <p class="mt-2 text-3xl font-black">72h</p>
+          </div>
+
+          <div class="card rounded-2xl bg-white/[0.04] p-5 transition hover:bg-white/[0.06]" role="listitem">
+            <p class="text-sm text-slate-400" data-i18n="ruleAttempts">Download attempts</p>
+            <p class="mt-2 text-3xl font-black">3</p>
+          </div>
+
+          <div class="card rounded-2xl bg-white/[0.04] p-5 transition hover:bg-white/[0.06]" role="listitem">
+            <p class="text-sm text-slate-400" data-i18n="ruleExpire">Unpaid deals</p>
+            <p class="mt-2 text-3xl font-black" data-i18n="autoExpire">Auto-expire</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" class="border-y border-white/10 bg-slate-900/55 py-24" aria-labelledby="security-title">
+      <div class="container-pad safe-wrap mx-auto max-w-7xl px-6">
+        <div class="safe-grid grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <div class="min-w-0 rtl-mobile-right">
+            <p class="mb-3 text-sm font-black uppercase tracking-widest text-emerald-300" data-i18n="securityLabel">Security</p>
+            <h2 id="security-title" class="text-4xl font-black tracking-tight md:text-5xl" data-i18n="securityTitle">The original file stays protected before payment.</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-300" data-i18n="securityText">
+              LockLink is designed so buyers can review enough information to make a decision without exposing the seller's original work before payment.
+            </p>
+          </div>
+
+          <div class="safe-grid grid gap-4 sm:grid-cols-2" role="list">
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <h3 class="text-lg font-black" data-i18n="security1Title">Private storage</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="security1Text">
+                Original files are stored privately and are never exposed through public file links before payment.
+              </p>
+            </div>
+
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <h3 class="text-lg font-black" data-i18n="security2Title">Protected previews</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="security2Text">
+                Previews may be watermarked, compressed, cropped, blurred, or partially limited.
+              </p>
+            </div>
+
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <h3 class="text-lg font-black" data-i18n="security3Title">Encrypted delivery</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="security3Text">
+                LockLink is planned to protect uploaded files using private storage and encryption behind the scenes.
+              </p>
+            </div>
+
+            <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+              <h3 class="text-lg font-black" data-i18n="security4Title">Controlled access</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="security4Text">
+                After payment, buyers access the file through a secure page with limited download attempts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24" aria-labelledby="use-cases-title">
+      <div class="container-pad safe-wrap mx-auto max-w-7xl px-6">
+        <div class="max-w-3xl rtl-mobile-right">
+          <p class="mb-3 text-sm font-black uppercase tracking-widest text-emerald-300" data-i18n="useLabel">Use cases</p>
+          <h2 id="use-cases-title" class="text-4xl font-black tracking-tight md:text-5xl" data-i18n="useTitle">For professional digital deliverables.</h2>
+        </div>
+
+        <div class="safe-grid mt-12 grid gap-6 md:grid-cols-4" role="list">
+          <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+            <h3 class="text-xl font-black" data-i18n="use1Title">Developers</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="use1Text">Deliver source code, websites, scripts, plugins, and project archives.</p>
+          </div>
+
+          <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+            <h3 class="text-xl font-black" data-i18n="use2Title">Designers</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="use2Text">Deliver brand packs, UI kits, templates, source files, and creative assets.</p>
+          </div>
+
+          <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+            <h3 class="text-xl font-black" data-i18n="use3Title">Editors</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="use3Text">Deliver final edits, presets, project files, and digital production assets.</p>
+          </div>
+
+          <div class="card rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/20 hover:bg-white/[0.06]" role="listitem">
+            <h3 class="text-xl font-black" data-i18n="use4Title">Creators</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400" data-i18n="use4Text">Deliver paid digital files through private unlock links.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="border-y border-white/10 bg-slate-900/55 py-24" aria-labelledby="pricing-title">
+      <div class="container-pad safe-wrap mx-auto max-w-7xl px-6">
+        <div class="mx-auto max-w-3xl text-center rtl-mobile-center">
+          <p class="mb-3 text-sm font-black uppercase tracking-widest text-emerald-300" data-i18n="pricingLabel">Pricing</p>
+          <h2 id="pricing-title" class="text-4xl font-black tracking-tight md:text-5xl" data-i18n="pricingTitle">Create links for free. Pay only on successful deals.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-300" data-i18n="pricingText">
+            LockLink is planned to earn a platform fee only when a deal is successfully paid and unlocked.
+          </p>
+        </div>
+
+        <div class="card mx-auto mt-12 max-w-4xl rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 md:p-8">
+          <div class="safe-grid grid gap-5 md:grid-cols-3" role="list">
+            <div class="card rounded-3xl bg-slate-950/70 p-6 transition hover:bg-slate-950" role="listitem">
+              <p class="text-sm text-slate-400" data-i18n="priceUpload">Upload</p>
+              <p class="mt-2 text-4xl font-black" data-i18n="free">Free</p>
+            </div>
+
+            <div class="card rounded-3xl bg-slate-950/70 p-6 transition hover:bg-slate-950" role="listitem">
+              <p class="text-sm text-slate-400" data-i18n="priceCreate">Create deal</p>
+              <p class="mt-2 text-4xl font-black" data-i18n="free">Free</p>
+            </div>
+
+            <div class="card rounded-3xl bg-slate-950/70 p-6 transition hover:bg-slate-950" role="listitem">
+              <p class="text-sm text-slate-400" data-i18n="priceFee">Successful deal fee</p>
+              <p class="mt-2 text-4xl font-black" data-i18n="planned">Planned</p>
+            </div>
+          </div>
+
+          <p class="mt-6 text-center text-sm leading-7 text-slate-400" data-i18n="pricingNote">
+            Final payment provider fees and platform commission will be confirmed before public launch.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24" aria-labelledby="position-title">
+      <div class="container-pad safe-wrap mx-auto max-w-7xl px-6">
+        <div class="card rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 transition hover:border-white/20 md:p-10 rtl-mobile-right">
+          <p class="mb-3 text-sm font-black uppercase tracking-widest text-emerald-300" data-i18n="positionLabel">Platform position</p>
+          <h2 id="position-title" class="max-w-4xl text-3xl font-black tracking-tight md:text-4xl" data-i18n="positionTitle">LockLink provides technical delivery infrastructure.</h2>
+          <p class="mt-5 max-w-5xl text-lg leading-8 text-slate-300" data-i18n="positionText">
+            LockLink is not a party to the agreement between seller and buyer, does not guarantee file quality, does not provide escrow services, and does not act as a dispute-resolution service. Sellers and buyers are responsible for their own private agreement, content, transaction, and legal obligations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="early-access" class="border-t border-white/10 bg-white/[0.04] py-24" aria-labelledby="early-access-title">
+      <div class="container-pad safe-wrap mx-auto max-w-4xl px-6 text-center rtl-mobile-center">
+        <p class="mb-3 text-sm font-black uppercase tracking-widest text-emerald-300" data-i18n="earlyLabel">Early access</p>
+
+        <h2 id="early-access-title" class="text-4xl font-black tracking-tight md:text-5xl" data-i18n="earlyTitle">
+          LockLink Instant Deal is coming soon.
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300" data-i18n="earlyText">
+          We are preparing private pay-to-unlock delivery links for freelancers, creators, and digital service providers.
+        </p>
+
+        <div class="card mx-auto mt-10 max-w-xl rounded-[2rem] border border-white/10 bg-slate-950 p-4">
+          <form id="earlyAccessForm" class="safe-flex flex flex-col gap-3 sm:flex-row rtl-row" novalidate>
+            <div class="min-w-0 flex-1">
+              <label for="emailInput" class="sr-only">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="emailInput"
+                placeholder="Enter your email"
+                required
+                aria-required="true"
+                aria-invalid="false"
+                aria-describedby="email-error"
+                class="min-h-14 w-full rounded-2xl border border-white/10 bg-white/[0.04] px-5 text-white outline-none placeholder:text-slate-500 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/50"
+              />
+              <p id="email-error" class="mt-2 hidden text-left text-sm text-red-400 rtl-text-right" role="alert"></p>
+            </div>
+
+            <button
+              type="submit"
+              id="submitBtn"
+              class="btn-primary min-h-14 rounded-2xl bg-emerald-400 px-6 font-black text-slate-950 transition hover:bg-emerald-300 focus:ring-4 focus:ring-emerald-400/50 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+              data-i18n="notifyMe"
+            >
+              Notify me
+            </button>
+          </form>
+
+          <div id="successMessage" class="mt-4 hidden rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 text-sm text-emerald-300" role="status">
+            ✓ Thank you! We'll notify you when we launch.
+          </div>
+        </div>
+
+        <p class="mt-5 text-sm text-slate-500" data-i18n="spamNote">
+          No spam. Product updates only.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 py-10" role="contentinfo">
+    <div class="container-pad safe-wrap mx-auto flex max-w-7xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between rtl-row">
+      <div class="rtl-mobile-right">
+        <div class="text-lg font-black tracking-tight">
+          Lock<span class="text-emerald-300">Link</span>
+        </div>
+        <p class="mt-1 text-sm text-slate-500" data-i18n="footerTagline">Private pay-to-unlock digital delivery.</p>
+      </div>
+
+      <nav class="safe-flex flex flex-wrap gap-5 text-sm text-slate-400 rtl-row" role="navigation" aria-label="Footer navigation">
+        <a href="privacy.html" class="transition hover:text-white focus:text-white" data-i18n="privacy">Privacy Policy</a>
+        <a href="terms.html" class="transition hover:text-white focus:text-white" data-i18n="terms">Terms of Service</a>
+        <a href="contact.html" class="transition hover:text-white focus:text-white" data-i18n="contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LockLink",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Private pay-to-unlock delivery links for digital work",
+    "operatingSystem": "Web"
+  }
+  </script>
+
+  <script>
+    const translations = {
+      en: {
+        navInstant: "Instant Deal",
+        navHow: "How it works",
+        navSecurity: "Security",
+        navPricing: "Pricing",
+        joinEarly: "Join early access",
+        heroBadge: "Private instant deals for digital work",
+        heroTitle: "Create a private pay-to-unlock delivery link.",
+        heroSubtitle: "LockLink helps freelancers and digital creators deliver already-agreed digital work through private links. The buyer reviews a protected preview, pays online, and the original file unlocks after payment.",
+        seeHow: "See how it works",
+        metric1Title: "Private links",
+        metric1Text: "No public marketplace",
+        metric2Title: "Protected preview",
+        metric2Text: "Original stays locked",
+        metric3Title: "Instant unlock",
+        metric3Text: "After payment",
+        heroNotice: "LockLink is not an escrow service, dispute service, or public marketplace. It provides private digital delivery infrastructure.",
+        demoType: "Instant Deal",
+        demoTitle: "Digital Project Delivery",
+        dealId: "Deal ID",
+        status: "Status",
+        locked: "Locked",
+        protectedPreview: "Protected preview",
+        previewSafe: "Safe preview",
+        projectPreview: "Project Preview",
+        previewLocked: "Original file locked",
+        previewNote: "Watermarked or limited preview only. The original package unlocks after payment.",
+        dealPrice: "Deal price",
+        reviewWindow: "Review window",
+        fileInfo: "File info",
+        fileInfoValue: "Encrypted package · 128 MB",
+        payUnlock: "Pay to unlock original file",
+        demoPaymentNote: "Demo interface. Payment processing will be enabled after launch.",
+        instantLabel: "Instant Deal",
+        instantTitle: "A private delivery workflow for already-agreed digital work.",
+        instantText: "LockLink is designed for deals that were discussed outside the platform. We provide the secure delivery layer: private link, protected preview, payment confirmation, and controlled unlock.",
+        doesTitle1: "Private deal page",
+        does1: "Creates a private delivery page for one file and one agreed deal.",
+        doesTitle2: "Protected preview",
+        does2: "Shows only a limited preview or safe metadata before checkout.",
+        doesTitle3: "Payment unlock",
+        does3: "Unlocks access after payment confirmation from the payment provider.",
+        doesTitle4: "Auto-expiry",
+        does4: "Expires unpaid deals automatically after the review window.",
+        howLabel: "How it works",
+        howTitle: "Simple on the screen. Secure behind the scenes.",
+        howText: "Sellers and buyers get a clean flow. LockLink handles protection, expiry, and unlock logic in the background.",
+        step1Title: "Seller creates",
+        step1Text: "The seller uploads the completed file, adds deal details, sets the price, and accepts the content responsibility agreement.",
+        step2Title: "Buyer reviews",
+        step2Text: "The buyer opens the private link and reviews the deal information, protected preview, price, and expiry time before payment.",
+        step3Title: "File unlocks",
+        step3Text: "After successful payment, the original file unlocks through a secure access page for a limited period.",
+        ruleReview: "Review window",
+        ruleAccess: "Download access",
+        ruleAttempts: "Download attempts",
+        ruleExpire: "Unpaid deals",
+        autoExpire: "Auto-expire",
+        securityLabel: "Security",
+        securityTitle: "The original file stays protected before payment.",
+        securityText: "LockLink is designed so buyers can review enough information to make a decision without exposing the seller's original work before payment.",
+        security1Title: "Private storage",
+        security1Text: "Original files are stored privately and are never exposed through public file links before payment.",
+        security2Title: "Protected previews",
+        security2Text: "Previews may be watermarked, compressed, cropped, blurred, or partially limited.",
+        security3Title: "Encrypted delivery",
+        security3Text: "LockLink is planned to protect uploaded files using private storage and encryption behind the scenes.",
+        security4Title: "Controlled access",
+        security4Text: "After payment, buyers access the file through a secure page with limited download attempts.",
+        useLabel: "Use cases",
+        useTitle: "For professional digital deliverables.",
+        use1Title: "Developers",
+        use1Text: "Deliver source code, websites, scripts, plugins, and project archives.",
+        use2Title: "Designers",
+        use2Text: "Deliver brand packs, UI kits, templates, source files, and creative assets.",
+        use3Title: "Editors",
+        use3Text: "Deliver final edits, presets, project files, and digital production assets.",
+        use4Title: "Creators",
+        use4Text: "Deliver paid digital files through private unlock links.",
+        pricingLabel: "Pricing",
+        pricingTitle: "Create links for free. Pay only on successful deals.",
+        pricingText: "LockLink is planned to earn a platform fee only when a deal is successfully paid and unlocked.",
+        priceUpload: "Upload",
+        priceCreate: "Create deal",
+        priceFee: "Successful deal fee",
+        free: "Free",
+        planned: "Planned",
+        pricingNote: "Final payment provider fees and platform commission will be confirmed before public launch.",
+        positionLabel: "Platform position",
+        positionTitle: "LockLink provides technical delivery infrastructure.",
+        positionText: "LockLink is not a party to the agreement between seller and buyer, does not guarantee file quality, does not provide escrow services, and does not act as a dispute-resolution service. Sellers and buyers are responsible for their own private agreement, content, transaction, and legal obligations.",
+        earlyLabel: "Early access",
+        earlyTitle: "LockLink Instant Deal is coming soon.",
+        earlyText: "We are preparing private pay-to-unlock delivery links for freelancers, creators, and digital service providers.",
+        notifyMe: "Notify me",
+        spamNote: "No spam. Product updates only.",
+        footerTagline: "Private pay-to-unlock digital delivery.",
+        privacy: "Privacy Policy",
+        terms: "Terms of Service",
+        contact: "Contact",
+        emailPlaceholder: "Enter your email",
+        emailRequired: "Please enter your email address",
+        emailInvalid: "Please enter a valid email address",
+        emailError: "Something went wrong. Please try again.",
+        successMessage: "✓ Thank you! We'll notify you when we launch."
+      },
+
+      fr: {
+        navInstant: "Deal instantané",
+        navHow: "Fonctionnement",
+        navSecurity: "Sécurité",
+        navPricing: "Tarifs",
+        joinEarly: "Accès anticipé",
+        heroBadge: "Deals privés instantanés pour le travail numérique",
+        heroTitle: "Créez un lien privé de livraison pay-to-unlock.",
+        heroSubtitle: "LockLink aide les freelances et créateurs numériques à livrer un travail déjà convenu via des liens privés. L’acheteur consulte un aperçu protégé, paie en ligne, puis le fichier original se débloque après le paiement.",
+        seeHow: "Voir le fonctionnement",
+        metric1Title: "Liens privés",
+        metric1Text: "Pas de marketplace publique",
+        metric2Title: "Aperçu protégé",
+        metric2Text: "L’original reste verrouillé",
+        metric3Title: "Déblocage instantané",
+        metric3Text: "Après paiement",
+        heroNotice: "LockLink n’est pas un service d’escrow, de litige ou une marketplace publique. LockLink fournit une infrastructure technique de livraison numérique privée.",
+        demoType: "Deal instantané",
+        demoTitle: "Livraison de projet numérique",
+        dealId: "ID du deal",
+        status: "Statut",
+        locked: "Verrouillé",
+        protectedPreview: "Aperçu protégé",
+        previewSafe: "Aperçu sécurisé",
+        projectPreview: "Aperçu du projet",
+        previewLocked: "Fichier original verrouillé",
+        previewNote: "Aperçu filigrané ou limité uniquement. Le package original se débloque après paiement.",
+        dealPrice: "Prix du deal",
+        reviewWindow: "Fenêtre de revue",
+        fileInfo: "Infos fichier",
+        fileInfoValue: "Package chiffré · 128 MB",
+        payUnlock: "Payer pour débloquer le fichier original",
+        demoPaymentNote: "Interface démo. Les paiements seront activés après le lancement.",
+        instantLabel: "Deal instantané",
+        instantTitle: "Un workflow privé pour les travaux numériques déjà convenus.",
+        instantText: "LockLink est conçu pour les deals discutés en dehors de la plateforme. Nous fournissons la couche de livraison sécurisée : lien privé, aperçu protégé, confirmation de paiement et déblocage contrôlé.",
+        doesTitle1: "Page de deal privée",
+        does1: "Crée une page de livraison privée pour un fichier et un deal convenu.",
+        doesTitle2: "Aperçu protégé",
+        does2: "Affiche uniquement un aperçu limité ou des métadonnées sûres avant le paiement.",
+        doesTitle3: "Déblocage par paiement",
+        does3: "Débloque l’accès après confirmation du paiement par le fournisseur.",
+        doesTitle4: "Expiration automatique",
+        does4: "Expire automatiquement les deals non payés après la fenêtre de revue.",
+        howLabel: "Fonctionnement",
+        howTitle: "Simple à l’écran. Sécurisé en arrière-plan.",
+        howText: "Vendeurs et acheteurs ont un flux clair. LockLink gère la protection, l’expiration et le déblocage en arrière-plan.",
+        step1Title: "Le vendeur crée",
+        step1Text: "Le vendeur téléverse le fichier final, ajoute les détails du deal, fixe le prix et accepte l’accord de responsabilité du contenu.",
+        step2Title: "L’acheteur vérifie",
+        step2Text: "L’acheteur ouvre le lien privé et consulte les informations du deal, l’aperçu protégé, le prix et le délai d’expiration avant le paiement.",
+        step3Title: "Le fichier se débloque",
+        step3Text: "Après un paiement réussi, le fichier original se débloque via une page d’accès sécurisée pendant une période limitée.",
+        ruleReview: "Fenêtre de revue",
+        ruleAccess: "Accès au téléchargement",
+        ruleAttempts: "Tentatives de téléchargement",
+        ruleExpire: "Deals non payés",
+        autoExpire: "Expiration automatique",
+        securityLabel: "Sécurité",
+        securityTitle: "Le fichier original reste protégé avant le paiement.",
+        securityText: "LockLink est conçu pour permettre à l’acheteur de vérifier assez d’informations sans exposer le travail original du vendeur avant paiement.",
+        security1Title: "Stockage privé",
+        security1Text: "Les fichiers originaux sont stockés en privé et ne sont jamais exposés via des liens publics avant paiement.",
+        security2Title: "Aperçus protégés",
+        security2Text: "Les aperçus peuvent être filigranés, compressés, recadrés, floutés ou partiellement limités.",
+        security3Title: "Livraison chiffrée",
+        security3Text: "LockLink prévoit de protéger les fichiers téléversés avec un stockage privé et du chiffrement en arrière-plan.",
+        security4Title: "Accès contrôlé",
+        security4Text: "Après paiement, les acheteurs accèdent au fichier via une page sécurisée avec des tentatives de téléchargement limitées.",
+        useLabel: "Cas d’utilisation",
+        useTitle: "Pour les livrables numériques professionnels.",
+        use1Title: "Développeurs",
+        use1Text: "Livrez du code source, des sites web, des scripts, des plugins et des archives de projets.",
+        use2Title: "Designers",
+        use2Text: "Livrez des packs de marque, kits UI, templates, fichiers source et assets créatifs.",
+        use3Title: "Éditeurs",
+        use3Text: "Livrez des montages finaux, presets, fichiers de projet et assets de production numérique.",
+        use4Title: "Créateurs",
+        use4Text: "Livrez des fichiers numériques payants via des liens privés de déverrouillage.",
+        pricingLabel: "Tarifs",
+        pricingTitle: "Créez des liens gratuitement. Payez seulement sur les deals réussis.",
+        pricingText: "LockLink prévoit de gagner des frais de plateforme uniquement lorsqu’un deal est payé et débloqué avec succès.",
+        priceUpload: "Téléversement",
+        priceCreate: "Création de deal",
+        priceFee: "Frais sur deal réussi",
+        free: "Gratuit",
+        planned: "Prévu",
+        pricingNote: "Les frais du fournisseur de paiement et la commission de plateforme seront confirmés avant le lancement public.",
+        positionLabel: "Position de la plateforme",
+        positionTitle: "LockLink fournit une infrastructure technique de livraison.",
+        positionText: "LockLink n’est pas partie à l’accord entre vendeur et acheteur, ne garantit pas la qualité du fichier, ne fournit pas de service d’escrow et n’agit pas comme service de résolution de litiges. Les vendeurs et acheteurs sont responsables de leur accord privé, contenu, transaction et obligations légales.",
+        earlyLabel: "Accès anticipé",
+        earlyTitle: "LockLink Instant Deal arrive bientôt.",
+        earlyText: "Nous préparons des liens privés de livraison pay-to-unlock pour freelances, créateurs et prestataires numériques.",
+        notifyMe: "Me prévenir",
+        spamNote: "Pas de spam. Seulement les mises à jour produit.",
+        footerTagline: "Livraison numérique privée pay-to-unlock.",
+        privacy: "Politique de confidentialité",
+        terms: "Conditions d’utilisation",
+        contact: "Contact",
+        emailPlaceholder: "Entrez votre email",
+        emailRequired: "Veuillez entrer votre adresse email",
+        emailInvalid: "Veuillez entrer une adresse email valide",
+        emailError: "Une erreur est survenue. Veuillez réessayer.",
+        successMessage: "✓ Merci ! Nous vous préviendrons au lancement."
+      },
+
+      ar: {
+        navInstant: "صفقة فورية",
+        navHow: "طريقة العمل",
+        navSecurity: "الأمان",
+        navPricing: "التسعير",
+        joinEarly: "انضم مبكراً",
+        heroBadge: "صفقات خاصة وفورية للأعمال الرقمية",
+        heroTitle: "أنشئ رابط تسليم خاص يُفتح بعد الدفع.",
+        heroSubtitle: "يساعد LockLink المستقلين وصنّاع المحتوى الرقمي على تسليم الأعمال المتفق عليها مسبقاً عبر روابط خاصة. يراجع المشتري معاينة محمية، ثم يدفع عبر الإنترنت، وبعدها يتم فتح الملف الأصلي.",
+        seeHow: "شاهد طريقة العمل",
+        metric1Title: "روابط خاصة",
+        metric1Text: "لا يوجد سوق عام",
+        metric2Title: "معاينة محمية",
+        metric2Text: "الأصل يبقى مقفلاً",
+        metric3Title: "فتح فوري",
+        metric3Text: "بعد الدفع",
+        heroNotice: "LockLink ليس خدمة ضمان مالي أو حل نزاعات أو سوقاً عاماً. LockLink يوفر بنية تقنية للتسليم الرقمي الخاص.",
+        demoType: "صفقة فورية",
+        demoTitle: "تسليم مشروع رقمي",
+        dealId: "رقم الصفقة",
+        status: "الحالة",
+        locked: "مقفل",
+        protectedPreview: "معاينة محمية",
+        previewSafe: "معاينة آمنة",
+        projectPreview: "معاينة المشروع",
+        previewLocked: "الملف الأصلي مقفل",
+        previewNote: "معاينة محدودة أو بعلامة مائية فقط. الحزمة الأصلية تُفتح بعد الدفع.",
+        dealPrice: "سعر الصفقة",
+        reviewWindow: "مدة المراجعة",
+        fileInfo: "معلومات الملف",
+        fileInfoValue: "حزمة مشفرة · 128 MB",
+        payUnlock: "ادفع لفتح الملف الأصلي",
+        demoPaymentNote: "واجهة تجريبية. سيتم تفعيل الدفع بعد الإطلاق.",
+        instantLabel: "صفقة فورية",
+        instantTitle: "نظام تسليم خاص للأعمال الرقمية المتفق عليها مسبقاً.",
+        instantText: "صُمم LockLink للصفقات التي تم الاتفاق عليها خارج المنصة. نحن نوفر طبقة التسليم الآمنة: رابط خاص، معاينة محمية، تأكيد الدفع، وفتح مضبوط للملف.",
+        doesTitle1: "صفحة صفقة خاصة",
+        does1: "ينشئ صفحة تسليم خاصة لملف واحد وصفقة واحدة متفق عليها.",
+        doesTitle2: "معاينة محمية",
+        does2: "يعرض فقط معاينة محدودة أو معلومات آمنة قبل الدفع.",
+        doesTitle3: "فتح بعد الدفع",
+        does3: "يفتح الوصول بعد تأكيد الدفع من مزود الدفع.",
+        doesTitle4: "انتهاء تلقائي",
+        does4: "تنتهي الصفقات غير المدفوعة تلقائياً بعد مدة المراجعة.",
+        howLabel: "طريقة العمل",
+        howTitle: "بسيط على الشاشة. آمن في الخلفية.",
+        howText: "يحصل البائع والمشتري على تجربة واضحة، بينما يتولى LockLink الحماية والانتهاء وفتح الملف في الخلفية.",
+        step1Title: "البائع ينشئ",
+        step1Text: "يرفع البائع الملف النهائي، يضيف تفاصيل الصفقة، يحدد السعر، ويوافق على اتفاقية مسؤولية المحتوى.",
+        step2Title: "المشتري يراجع",
+        step2Text: "يفتح المشتري الرابط الخاص ويراجع معلومات الصفقة والمعاينة المحمية والسعر ووقت الانتهاء قبل الدفع.",
+        step3Title: "الملف يُفتح",
+        step3Text: "بعد نجاح الدفع، يتم فتح الملف الأصلي عبر صفحة وصول آمنة لمدة محدودة.",
+        ruleReview: "مدة المراجعة",
+        ruleAccess: "مدة الوصول للتحميل",
+        ruleAttempts: "محاولات التحميل",
+        ruleExpire: "الصفقات غير المدفوعة",
+        autoExpire: "تنتهي تلقائياً",
+        securityLabel: "الأمان",
+        securityTitle: "الملف الأصلي يبقى محمياً قبل الدفع.",
+        securityText: "صُمم LockLink حتى يتمكن المشتري من مراجعة معلومات كافية لاتخاذ القرار دون كشف العمل الأصلي للبائع قبل الدفع.",
+        security1Title: "تخزين خاص",
+        security1Text: "يتم تخزين الملفات الأصلية بشكل خاص ولا يتم كشفها عبر روابط ملفات عامة قبل الدفع.",
+        security2Title: "معاينات محمية",
+        security2Text: "قد تكون المعاينات بعلامة مائية أو مضغوطة أو مقصوصة أو مشوشة أو محدودة جزئياً.",
+        security3Title: "تسليم مشفر",
+        security3Text: "يخطط LockLink لحماية الملفات المرفوعة باستخدام تخزين خاص وتشفير يعمل في الخلفية.",
+        security4Title: "وصول مضبوط",
+        security4Text: "بعد الدفع، يصل المشتري إلى الملف عبر صفحة آمنة مع عدد محدود من محاولات التحميل.",
+        useLabel: "حالات الاستخدام",
+        useTitle: "للأعمال الرقمية الاحترافية.",
+        use1Title: "المطورون",
+        use1Text: "تسليم الكود المصدري والمواقع والسكريبتات والإضافات وأرشيفات المشاريع.",
+        use2Title: "المصممون",
+        use2Text: "تسليم حزم الهوية وواجهات المستخدم والقوالب والملفات المصدرية والملفات الإبداعية.",
+        use3Title: "المحررون",
+        use3Text: "تسليم النسخ النهائية والإعدادات المسبقة وملفات المشاريع وملفات الإنتاج الرقمي.",
+        use4Title: "صنّاع المحتوى",
+        use4Text: "تسليم الملفات الرقمية المدفوعة عبر روابط خاصة تُفتح بعد الدفع.",
+        pricingLabel: "التسعير",
+        pricingTitle: "أنشئ الروابط مجاناً. ادفع فقط عند نجاح الصفقة.",
+        pricingText: "يخطط LockLink للحصول على رسوم منصة فقط عندما يتم دفع الصفقة وفتحها بنجاح.",
+        priceUpload: "رفع الملف",
+        priceCreate: "إنشاء الصفقة",
+        priceFee: "رسوم الصفقة الناجحة",
+        free: "مجاناً",
+        planned: "قيد التخطيط",
+        pricingNote: "سيتم تأكيد رسوم مزود الدفع وعمولة المنصة قبل الإطلاق العام.",
+        positionLabel: "موقف المنصة",
+        positionTitle: "LockLink يوفر بنية تقنية للتسليم.",
+        positionText: "LockLink ليس طرفاً في الاتفاق بين البائع والمشتري، ولا يضمن جودة الملف، ولا يقدم خدمة ضمان مالي، ولا يعمل كخدمة لحل النزاعات. البائعون والمشترون مسؤولون عن اتفاقهم الخاص ومحتواهم ومعاملاتهم والتزاماتهم القانونية.",
+        earlyLabel: "الوصول المبكر",
+        earlyTitle: "LockLink Instant Deal قادم قريباً.",
+        earlyText: "نحن نجهز روابط تسليم رقمية خاصة تُفتح بعد الدفع للمستقلين وصنّاع المحتوى ومقدمي الخدمات الرقمية.",
+        notifyMe: "أخبرني",
+        spamNote: "لا رسائل مزعجة. تحديثات المنتج فقط.",
+        footerTagline: "تسليم رقمي خاص يُفتح بعد الدفع.",
+        privacy: "سياسة الخصوصية",
+        terms: "شروط الخدمة",
+        contact: "تواصل معنا",
+        emailPlaceholder: "أدخل بريدك الإلكتروني",
+        emailRequired: "يرجى إدخال بريدك الإلكتروني",
+        emailInvalid: "يرجى إدخال بريد إلكتروني صحيح",
+        emailError: "حدث خطأ. يرجى المحاولة مرة أخرى.",
+        successMessage: "✓ شكراً لك! سنخبرك عند الإطلاق."
+      },
+
+      es: {
+        navInstant: "Acuerdo instantáneo",
+        navHow: "Cómo funciona",
+        navSecurity: "Seguridad",
+        navPricing: "Precios",
+        joinEarly: "Unirse al acceso anticipado",
+        heroBadge: "Acuerdos privados instantáneos para trabajo digital",
+        heroTitle: "Crea un enlace privado de entrega que se desbloquea tras el pago.",
+        heroSubtitle: "LockLink ayuda a freelancers y creadores digitales a entregar trabajos ya acordados mediante enlaces privados. El comprador revisa una vista previa protegida, paga en línea y el archivo original se desbloquea después del pago.",
+        seeHow: "Ver cómo funciona",
+        metric1Title: "Enlaces privados",
+        metric1Text: "Sin marketplace público",
+        metric2Title: "Vista previa protegida",
+        metric2Text: "El original permanece bloqueado",
+        metric3Title: "Desbloqueo instantáneo",
+        metric3Text: "Después del pago",
+        heroNotice: "LockLink no es un servicio de escrow, resolución de disputas ni un marketplace público. Proporciona infraestructura técnica privada para entrega digital.",
+        demoType: "Acuerdo instantáneo",
+        demoTitle: "Entrega de proyecto digital",
+        dealId: "ID del acuerdo",
+        status: "Estado",
+        locked: "Bloqueado",
+        protectedPreview: "Vista previa protegida",
+        previewSafe: "Vista segura",
+        projectPreview: "Vista previa del proyecto",
+        previewLocked: "Archivo original bloqueado",
+        previewNote: "Solo vista previa limitada o con marca de agua. El paquete original se desbloquea después del pago.",
+        dealPrice: "Precio del acuerdo",
+        reviewWindow: "Ventana de revisión",
+        fileInfo: "Información del archivo",
+        fileInfoValue: "Paquete cifrado · 128 MB",
+        payUnlock: "Pagar para desbloquear el archivo original",
+        demoPaymentNote: "Interfaz de demostración. El procesamiento de pagos se activará después del lanzamiento.",
+        instantLabel: "Acuerdo instantáneo",
+        instantTitle: "Un flujo privado de entrega para trabajo digital ya acordado.",
+        instantText: "LockLink está diseñado para acuerdos tratados fuera de la plataforma. Proporcionamos la capa segura de entrega: enlace privado, vista previa protegida, confirmación de pago y desbloqueo controlado.",
+        doesTitle1: "Página privada del acuerdo",
+        does1: "Crea una página privada de entrega para un archivo y un acuerdo concreto.",
+        doesTitle2: "Vista previa protegida",
+        does2: "Muestra solo una vista limitada o metadatos seguros antes del pago.",
+        doesTitle3: "Desbloqueo por pago",
+        does3: "Desbloquea el acceso después de la confirmación del proveedor de pagos.",
+        doesTitle4: "Vencimiento automático",
+        does4: "Los acuerdos no pagados vencen automáticamente después de la ventana de revisión.",
+        howLabel: "Cómo funciona",
+        howTitle: "Simple en pantalla. Seguro en segundo plano.",
+        howText: "Vendedores y compradores obtienen un flujo limpio. LockLink gestiona protección, vencimiento y lógica de desbloqueo en segundo plano.",
+        step1Title: "El vendedor crea",
+        step1Text: "El vendedor sube el archivo terminado, añade los detalles del acuerdo, fija el precio y acepta la responsabilidad sobre el contenido.",
+        step2Title: "El comprador revisa",
+        step2Text: "El comprador abre el enlace privado y revisa la información del acuerdo, la vista previa protegida, el precio y el vencimiento antes de pagar.",
+        step3Title: "El archivo se desbloquea",
+        step3Text: "Tras un pago exitoso, el archivo original se desbloquea mediante una página de acceso segura por un periodo limitado.",
+        ruleReview: "Ventana de revisión",
+        ruleAccess: "Acceso de descarga",
+        ruleAttempts: "Intentos de descarga",
+        ruleExpire: "Acuerdos no pagados",
+        autoExpire: "Vencen automáticamente",
+        securityLabel: "Seguridad",
+        securityTitle: "El archivo original permanece protegido antes del pago.",
+        securityText: "LockLink está diseñado para que los compradores revisen suficiente información sin exponer el trabajo original del vendedor antes del pago.",
+        security1Title: "Almacenamiento privado",
+        security1Text: "Los archivos originales se almacenan de forma privada y no se exponen mediante enlaces públicos antes del pago.",
+        security2Title: "Vistas previas protegidas",
+        security2Text: "Las vistas previas pueden tener marca de agua, compresión, recorte, desenfoque o limitación parcial.",
+        security3Title: "Entrega cifrada",
+        security3Text: "LockLink está previsto para proteger archivos subidos mediante almacenamiento privado y cifrado en segundo plano.",
+        security4Title: "Acceso controlado",
+        security4Text: "Después del pago, los compradores acceden al archivo mediante una página segura con intentos de descarga limitados.",
+        useLabel: "Casos de uso",
+        useTitle: "Para entregables digitales profesionales.",
+        use1Title: "Desarrolladores",
+        use1Text: "Entrega código fuente, sitios web, scripts, plugins y archivos de proyecto.",
+        use2Title: "Diseñadores",
+        use2Text: "Entrega paquetes de marca, kits UI, plantillas, archivos fuente y recursos creativos.",
+        use3Title: "Editores",
+        use3Text: "Entrega ediciones finales, presets, archivos de proyecto y recursos de producción digital.",
+        use4Title: "Creadores",
+        use4Text: "Entrega archivos digitales pagados mediante enlaces privados de desbloqueo.",
+        pricingLabel: "Precios",
+        pricingTitle: "Crea enlaces gratis. Paga solo en acuerdos exitosos.",
+        pricingText: "LockLink está previsto para cobrar una comisión de plataforma solo cuando un acuerdo se paga y desbloquea con éxito.",
+        priceUpload: "Subida",
+        priceCreate: "Crear acuerdo",
+        priceFee: "Comisión por acuerdo exitoso",
+        free: "Gratis",
+        planned: "Planificado",
+        pricingNote: "Las tarifas del proveedor de pagos y la comisión de plataforma se confirmarán antes del lanzamiento público.",
+        positionLabel: "Posición de la plataforma",
+        positionTitle: "LockLink proporciona infraestructura técnica de entrega.",
+        positionText: "LockLink no es parte del acuerdo entre vendedor y comprador, no garantiza la calidad del archivo, no proporciona servicios de escrow y no actúa como servicio de resolución de disputas. Vendedores y compradores son responsables de su propio acuerdo privado, contenido, transacción y obligaciones legales.",
+        earlyLabel: "Acceso anticipado",
+        earlyTitle: "LockLink Instant Deal llegará pronto.",
+        earlyText: "Estamos preparando enlaces privados de entrega pay-to-unlock para freelancers, creadores y proveedores de servicios digitales.",
+        notifyMe: "Avisarme",
+        spamNote: "Sin spam. Solo actualizaciones del producto.",
+        footerTagline: "Entrega digital privada pay-to-unlock.",
+        privacy: "Política de privacidad",
+        terms: "Términos de servicio",
+        contact: "Contacto",
+        emailPlaceholder: "Introduce tu email",
+        emailRequired: "Introduce tu dirección de email",
+        emailInvalid: "Introduce una dirección de email válida",
+        emailError: "Algo salió mal. Inténtalo de nuevo.",
+        successMessage: "✓ ¡Gracias! Te avisaremos cuando lancemos."
+      },
+
+      de: {
+        navInstant: "Instant Deal",
+        navHow: "So funktioniert es",
+        navSecurity: "Sicherheit",
+        navPricing: "Preise",
+        joinEarly: "Frühzugang beitreten",
+        heroBadge: "Private Sofort-Deals für digitale Arbeit",
+        heroTitle: "Erstelle einen privaten Lieferlink, der nach Zahlung freigeschaltet wird.",
+        heroSubtitle: "LockLink hilft Freelancern und digitalen Kreativen, bereits vereinbarte digitale Arbeit über private Links zu liefern. Der Käufer prüft eine geschützte Vorschau, bezahlt online und die Originaldatei wird nach der Zahlung freigeschaltet.",
+        seeHow: "So funktioniert es",
+        metric1Title: "Private Links",
+        metric1Text: "Kein öffentlicher Marktplatz",
+        metric2Title: "Geschützte Vorschau",
+        metric2Text: "Original bleibt gesperrt",
+        metric3Title: "Sofortige Freischaltung",
+        metric3Text: "Nach Zahlung",
+        heroNotice: "LockLink ist kein Escrow-Service, kein Streitbeilegungsdienst und kein öffentlicher Marktplatz. LockLink stellt private technische Infrastruktur für digitale Lieferung bereit.",
+        demoType: "Instant Deal",
+        demoTitle: "Digitale Projektlieferung",
+        dealId: "Deal-ID",
+        status: "Status",
+        locked: "Gesperrt",
+        protectedPreview: "Geschützte Vorschau",
+        previewSafe: "Sichere Vorschau",
+        projectPreview: "Projektvorschau",
+        previewLocked: "Originaldatei gesperrt",
+        previewNote: "Nur wasserzeichenbasierte oder begrenzte Vorschau. Das Originalpaket wird nach Zahlung freigeschaltet.",
+        dealPrice: "Deal-Preis",
+        reviewWindow: "Prüfzeitraum",
+        fileInfo: "Dateiinformation",
+        fileInfoValue: "Verschlüsseltes Paket · 128 MB",
+        payUnlock: "Zahlen, um die Originaldatei freizuschalten",
+        demoPaymentNote: "Demo-Oberfläche. Zahlungsabwicklung wird nach dem Launch aktiviert.",
+        instantLabel: "Instant Deal",
+        instantTitle: "Ein privater Lieferablauf für bereits vereinbarte digitale Arbeit.",
+        instantText: "LockLink ist für Deals gedacht, die außerhalb der Plattform vereinbart wurden. Wir liefern die sichere Übergabeschicht: privater Link, geschützte Vorschau, Zahlungsbestätigung und kontrollierte Freischaltung.",
+        doesTitle1: "Private Deal-Seite",
+        does1: "Erstellt eine private Lieferseite für eine Datei und einen vereinbarten Deal.",
+        doesTitle2: "Geschützte Vorschau",
+        does2: "Zeigt vor dem Checkout nur eine begrenzte Vorschau oder sichere Metadaten.",
+        doesTitle3: "Zahlungsfreischaltung",
+        does3: "Schaltet Zugriff nach Bestätigung durch den Zahlungsanbieter frei.",
+        doesTitle4: "Automatischer Ablauf",
+        does4: "Nicht bezahlte Deals laufen nach dem Prüfzeitraum automatisch ab.",
+        howLabel: "So funktioniert es",
+        howTitle: "Einfach auf dem Bildschirm. Sicher im Hintergrund.",
+        howText: "Verkäufer und Käufer erhalten einen klaren Ablauf. LockLink übernimmt Schutz, Ablauf und Freischaltlogik im Hintergrund.",
+        step1Title: "Verkäufer erstellt",
+        step1Text: "Der Verkäufer lädt die fertige Datei hoch, fügt Deal-Details hinzu, legt den Preis fest und akzeptiert die Verantwortung für den Inhalt.",
+        step2Title: "Käufer prüft",
+        step2Text: "Der Käufer öffnet den privaten Link und prüft Deal-Informationen, geschützte Vorschau, Preis und Ablaufzeit vor der Zahlung.",
+        step3Title: "Datei wird freigeschaltet",
+        step3Text: "Nach erfolgreicher Zahlung wird die Originaldatei über eine sichere Zugriffsseite für eine begrenzte Zeit freigeschaltet.",
+        ruleReview: "Prüfzeitraum",
+        ruleAccess: "Download-Zugriff",
+        ruleAttempts: "Download-Versuche",
+        ruleExpire: "Unbezahlte Deals",
+        autoExpire: "Laufen automatisch ab",
+        securityLabel: "Sicherheit",
+        securityTitle: "Die Originaldatei bleibt vor der Zahlung geschützt.",
+        securityText: "LockLink ist so konzipiert, dass Käufer genügend Informationen prüfen können, ohne die Originalarbeit des Verkäufers vor der Zahlung offenzulegen.",
+        security1Title: "Private Speicherung",
+        security1Text: "Originaldateien werden privat gespeichert und vor der Zahlung niemals über öffentliche Dateilinks offengelegt.",
+        security2Title: "Geschützte Vorschauen",
+        security2Text: "Vorschauen können mit Wasserzeichen versehen, komprimiert, zugeschnitten, weichgezeichnet oder teilweise begrenzt sein.",
+        security3Title: "Verschlüsselte Lieferung",
+        security3Text: "LockLink soll hochgeladene Dateien durch private Speicherung und Verschlüsselung im Hintergrund schützen.",
+        security4Title: "Kontrollierter Zugriff",
+        security4Text: "Nach der Zahlung greifen Käufer über eine sichere Seite mit begrenzten Download-Versuchen auf die Datei zu.",
+        useLabel: "Anwendungsfälle",
+        useTitle: "Für professionelle digitale Liefergegenstände.",
+        use1Title: "Entwickler",
+        use1Text: "Liefere Quellcode, Websites, Skripte, Plugins und Projektarchive.",
+        use2Title: "Designer",
+        use2Text: "Liefere Markenpakete, UI-Kits, Vorlagen, Quelldateien und kreative Assets.",
+        use3Title: "Editoren",
+        use3Text: "Liefere finale Bearbeitungen, Presets, Projektdateien und digitale Produktionsassets.",
+        use4Title: "Kreative",
+        use4Text: "Liefere bezahlte digitale Dateien über private Freischaltlinks.",
+        pricingLabel: "Preise",
+        pricingTitle: "Links kostenlos erstellen. Nur bei erfolgreichen Deals zahlen.",
+        pricingText: "LockLink plant, nur dann eine Plattformgebühr zu erheben, wenn ein Deal erfolgreich bezahlt und freigeschaltet wird.",
+        priceUpload: "Upload",
+        priceCreate: "Deal erstellen",
+        priceFee: "Gebühr bei erfolgreichem Deal",
+        free: "Kostenlos",
+        planned: "Geplant",
+        pricingNote: "Gebühren des Zahlungsanbieters und Plattformprovision werden vor dem öffentlichen Launch bestätigt.",
+        positionLabel: "Plattformposition",
+        positionTitle: "LockLink stellt technische Lieferinfrastruktur bereit.",
+        positionText: "LockLink ist keine Partei der Vereinbarung zwischen Verkäufer und Käufer, garantiert nicht die Dateiqualität, bietet keine Escrow-Dienste und handelt nicht als Streitbeilegungsdienst. Verkäufer und Käufer sind selbst verantwortlich für ihre private Vereinbarung, Inhalte, Transaktion und rechtlichen Verpflichtungen.",
+        earlyLabel: "Frühzugang",
+        earlyTitle: "LockLink Instant Deal kommt bald.",
+        earlyText: "Wir bereiten private Pay-to-Unlock-Lieferlinks für Freelancer, Kreative und digitale Dienstleister vor.",
+        notifyMe: "Benachrichtigen",
+        spamNote: "Kein Spam. Nur Produktupdates.",
+        footerTagline: "Private digitale Pay-to-Unlock-Lieferung.",
+        privacy: "Datenschutzerklärung",
+        terms: "Nutzungsbedingungen",
+        contact: "Kontakt",
+        emailPlaceholder: "E-Mail eingeben",
+        emailRequired: "Bitte gib deine E-Mail-Adresse ein",
+        emailInvalid: "Bitte gib eine gültige E-Mail-Adresse ein",
+        emailError: "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+        successMessage: "✓ Danke! Wir benachrichtigen dich beim Launch."
+      },
+
+      pt: {
+        navInstant: "Negócio instantâneo",
+        navHow: "Como funciona",
+        navSecurity: "Segurança",
+        navPricing: "Preços",
+        joinEarly: "Entrar no acesso antecipado",
+        heroBadge: "Negócios privados instantâneos para trabalho digital",
+        heroTitle: "Crie um link privado de entrega que desbloqueia após o pagamento.",
+        heroSubtitle: "A LockLink ajuda freelancers e criadores digitais a entregar trabalhos digitais já acordados por links privados. O comprador analisa uma prévia protegida, paga online e o arquivo original é desbloqueado após o pagamento.",
+        seeHow: "Ver como funciona",
+        metric1Title: "Links privados",
+        metric1Text: "Sem marketplace público",
+        metric2Title: "Prévia protegida",
+        metric2Text: "O original permanece bloqueado",
+        metric3Title: "Desbloqueio instantâneo",
+        metric3Text: "Após o pagamento",
+        heroNotice: "A LockLink não é um serviço de escrow, resolução de disputas nem marketplace público. Ela fornece infraestrutura técnica privada para entrega digital.",
+        demoType: "Negócio instantâneo",
+        demoTitle: "Entrega de projeto digital",
+        dealId: "ID do negócio",
+        status: "Status",
+        locked: "Bloqueado",
+        protectedPreview: "Prévia protegida",
+        previewSafe: "Prévia segura",
+        projectPreview: "Prévia do projeto",
+        previewLocked: "Arquivo original bloqueado",
+        previewNote: "Apenas prévia limitada ou com marca d’água. O pacote original é desbloqueado após o pagamento.",
+        dealPrice: "Preço do negócio",
+        reviewWindow: "Janela de revisão",
+        fileInfo: "Informações do arquivo",
+        fileInfoValue: "Pacote criptografado · 128 MB",
+        payUnlock: "Pagar para desbloquear o arquivo original",
+        demoPaymentNote: "Interface de demonstração. O processamento de pagamentos será ativado após o lançamento.",
+        instantLabel: "Negócio instantâneo",
+        instantTitle: "Um fluxo privado de entrega para trabalho digital já acordado.",
+        instantText: "A LockLink foi criada para negócios combinados fora da plataforma. Fornecemos a camada segura de entrega: link privado, prévia protegida, confirmação de pagamento e desbloqueio controlado.",
+        doesTitle1: "Página privada do negócio",
+        does1: "Cria uma página privada de entrega para um arquivo e um negócio acordado.",
+        doesTitle2: "Prévia protegida",
+        does2: "Mostra apenas uma prévia limitada ou metadados seguros antes do checkout.",
+        doesTitle3: "Desbloqueio por pagamento",
+        does3: "Desbloqueia o acesso após confirmação do provedor de pagamento.",
+        doesTitle4: "Expiração automática",
+        does4: "Negócios não pagos expiram automaticamente após a janela de revisão.",
+        howLabel: "Como funciona",
+        howTitle: "Simples na tela. Seguro nos bastidores.",
+        howText: "Vendedores e compradores recebem um fluxo claro. A LockLink gerencia proteção, expiração e lógica de desbloqueio em segundo plano.",
+        step1Title: "O vendedor cria",
+        step1Text: "O vendedor envia o arquivo finalizado, adiciona detalhes do negócio, define o preço e aceita a responsabilidade pelo conteúdo.",
+        step2Title: "O comprador revisa",
+        step2Text: "O comprador abre o link privado e revisa as informações do negócio, a prévia protegida, o preço e o prazo de expiração antes do pagamento.",
+        step3Title: "O arquivo desbloqueia",
+        step3Text: "Após pagamento bem-sucedido, o arquivo original é desbloqueado por uma página segura de acesso por tempo limitado.",
+        ruleReview: "Janela de revisão",
+        ruleAccess: "Acesso ao download",
+        ruleAttempts: "Tentativas de download",
+        ruleExpire: "Negócios não pagos",
+        autoExpire: "Expiram automaticamente",
+        securityLabel: "Segurança",
+        securityTitle: "O arquivo original permanece protegido antes do pagamento.",
+        securityText: "A LockLink foi projetada para que compradores analisem informações suficientes sem expor o trabalho original do vendedor antes do pagamento.",
+        security1Title: "Armazenamento privado",
+        security1Text: "Arquivos originais são armazenados de forma privada e nunca expostos por links públicos antes do pagamento.",
+        security2Title: "Prévias protegidas",
+        security2Text: "Prévias podem ter marca d’água, compressão, recorte, desfoque ou limitação parcial.",
+        security3Title: "Entrega criptografada",
+        security3Text: "A LockLink planeja proteger arquivos enviados com armazenamento privado e criptografia nos bastidores.",
+        security4Title: "Acesso controlado",
+        security4Text: "Após o pagamento, compradores acessam o arquivo por uma página segura com tentativas de download limitadas.",
+        useLabel: "Casos de uso",
+        useTitle: "Para entregas digitais profissionais.",
+        use1Title: "Desenvolvedores",
+        use1Text: "Entregue código-fonte, sites, scripts, plugins e arquivos de projeto.",
+        use2Title: "Designers",
+        use2Text: "Entregue pacotes de marca, UI kits, templates, arquivos fonte e assets criativos.",
+        use3Title: "Editores",
+        use3Text: "Entregue edições finais, presets, arquivos de projeto e assets de produção digital.",
+        use4Title: "Criadores",
+        use4Text: "Entregue arquivos digitais pagos por links privados de desbloqueio.",
+        pricingLabel: "Preços",
+        pricingTitle: "Crie links gratuitamente. Pague apenas em negócios bem-sucedidos.",
+        pricingText: "A LockLink planeja cobrar uma taxa de plataforma apenas quando um negócio for pago e desbloqueado com sucesso.",
+        priceUpload: "Envio",
+        priceCreate: "Criar negócio",
+        priceFee: "Taxa de negócio bem-sucedido",
+        free: "Grátis",
+        planned: "Planejado",
+        pricingNote: "As taxas do provedor de pagamento e a comissão da plataforma serão confirmadas antes do lançamento público.",
+        positionLabel: "Posição da plataforma",
+        positionTitle: "A LockLink fornece infraestrutura técnica de entrega.",
+        positionText: "A LockLink não é parte do acordo entre vendedor e comprador, não garante qualidade do arquivo, não fornece serviços de escrow e não atua como serviço de resolução de disputas. Vendedores e compradores são responsáveis por seu próprio acordo privado, conteúdo, transação e obrigações legais.",
+        earlyLabel: "Acesso antecipado",
+        earlyTitle: "LockLink Instant Deal chegará em breve.",
+        earlyText: "Estamos preparando links privados de entrega pay-to-unlock para freelancers, criadores e provedores de serviços digitais.",
+        notifyMe: "Avisar-me",
+        spamNote: "Sem spam. Apenas atualizações do produto.",
+        footerTagline: "Entrega digital privada pay-to-unlock.",
+        privacy: "Política de Privacidade",
+        terms: "Termos de Serviço",
+        contact: "Contato",
+        emailPlaceholder: "Digite seu email",
+        emailRequired: "Digite seu endereço de email",
+        emailInvalid: "Digite um endereço de email válido",
+        emailError: "Algo deu errado. Tente novamente.",
+        successMessage: "✓ Obrigado! Avisaremos você no lançamento."
+      }
+    };
+
+    const languageSelector = document.getElementById("languageSelector");
+    const emailInput = document.getElementById("emailInput");
+    const earlyAccessForm = document.getElementById("earlyAccessForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const successMessage = document.getElementById("successMessage");
+    const emailError = document.getElementById("email-error");
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const closeMobileMenuBtn = document.getElementById("closeMobileMenuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+    const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+    function normalizeScrollX() {
+      document.documentElement.scrollLeft = 0;
+      document.body.scrollLeft = 0;
+
+      if (window.scrollX !== 0) {
+        window.scrollTo(0, window.scrollY);
+      }
+    }
+
+    function applyLanguage(language) {
+      const selected = translations[language] || translations.en;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+
+        if (selected[key]) {
+          element.textContent = selected[key];
+        }
+      });
+
+      if (emailInput && selected.emailPlaceholder) {
+        emailInput.placeholder = selected.emailPlaceholder;
+      }
+
+      if (successMessage && selected.successMessage) {
+        successMessage.textContent = selected.successMessage;
+      }
+
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+
+      document.body.classList.toggle("lang-ar", language === "ar");
+
+      try {
+        localStorage.setItem("locklink_language", language);
+      } catch (error) {
+        console.warn("Language preference could not be saved.");
+      }
+
+      requestAnimationFrame(normalizeScrollX);
+      setTimeout(normalizeScrollX, 50);
+    }
+
+    let savedLanguage = "en";
+
+    try {
+      savedLanguage = localStorage.getItem("locklink_language") || "en";
+    } catch (error) {
+      savedLanguage = "en";
+    }
+
+    languageSelector.value = translations[savedLanguage] ? savedLanguage : "en";
+    applyLanguage(languageSelector.value);
+
+    languageSelector.addEventListener("change", function () {
+      closeMobileMenu();
+      applyLanguage(this.value);
+    });
+
+    function openMobileMenu() {
+      mobileMenu.classList.add("open");
+      mobileMenuOverlay.classList.add("open");
+      mobileMenuBtn.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflowX = "hidden";
+      normalizeScrollX();
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("open");
+      mobileMenuOverlay.classList.remove("open");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+      document.documentElement.style.overflowX = "hidden";
+      normalizeScrollX();
+    }
+
+    mobileMenuBtn.addEventListener("click", openMobileMenu);
+    closeMobileMenuBtn.addEventListener("click", closeMobileMenu);
+    mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu.classList.contains("open")) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener("resize", normalizeScrollX);
+    window.addEventListener("orientationchange", () => {
+      setTimeout(normalizeScrollX, 150);
+    });
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function getCurrentTranslation() {
+      return translations[languageSelector.value] || translations.en;
+    }
+
+    function showError(message) {
+      emailError.textContent = message;
+      emailError.classList.remove("hidden");
+      emailInput.setAttribute("aria-invalid", "true");
+      emailInput.classList.add("border-red-400");
+    }
+
+    function hideError() {
+      emailError.classList.add("hidden");
+      emailInput.setAttribute("aria-invalid", "false");
+      emailInput.classList.remove("border-red-400");
+    }
+
+    function showSuccess() {
+      const selected = getCurrentTranslation();
+      successMessage.textContent = selected.successMessage || translations.en.successMessage;
+      successMessage.classList.remove("hidden");
+      earlyAccessForm.reset();
+
+      setTimeout(() => {
+        successMessage.classList.add("hidden");
+      }, 5000);
+    }
+
+    earlyAccessForm.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      hideError();
+
+      const selected = getCurrentTranslation();
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        showError(selected.emailRequired || translations.en.emailRequired);
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        showError(selected.emailInvalid || translations.en.emailInvalid);
+        return;
+      }
+
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner inline-block h-5 w-5 rounded-full border-2 border-slate-950 border-t-transparent"></span>';
+
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 900));
+        showSuccess();
+      } catch (error) {
+        showError(selected.emailError || translations.en.emailError);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+
+    emailInput.addEventListener("input", hideError);
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (event) {
+        const href = this.getAttribute("href");
+
+        if (!href || href === "#") return;
+
+        const target = document.querySelector(href);
+
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      const animateOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll("section").forEach((section, index) => {
+        if (index > 0) {
+          section.style.opacity = "0";
+          section.style.transform = "translateY(20px)";
+          section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          animateOnScroll.observe(section);
+        }
+      });
+    }
+  </script>
+</body>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,4 +2078,5 @@
   </footer>
 
 </body>
+>>>>>>> aab95774317e3c210c7d11e5feba4700db83b47b
 </html>

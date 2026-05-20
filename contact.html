@@ -1,121 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact | LockLink</title>
+  <meta name="title" content="Contact | LockLink" />
+  <meta name="description" content="Contact LockLink for support, abuse reports, business inquiries, and early access to private pay-to-unlock digital delivery infrastructure." />
 
-  <meta name="description" content="Contact LockLink, a secure pay-to-unlock digital delivery platform for freelancers and digital creators." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://locklink.net/contact.html" />
+  <meta property="og:title" content="Contact | LockLink" />
+  <meta property="og:description" content="Contact LockLink for support, abuse reports, business inquiries, and early access." />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact | LockLink" />
+  <meta name="twitter:description" content="Contact LockLink for support, abuse reports, business inquiries, and early access." />
+
+  <link rel="canonical" href="https://locklink.net/contact.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
     body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 500;
+      background: rgb(2 6 23);
+      color: #fff;
+    }
+
+    main,
+    header,
+    footer,
+    section,
+    article,
+    div,
+    nav {
+      max-width: 100%;
+    }
+
+    a,
+    button {
+      max-width: 100%;
+    }
+
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .soft-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(circle at center, black, transparent 72%);
+      -webkit-mask-image: radial-gradient(circle at center, black, transparent 72%);
+    }
+
+    .contact-card {
+      min-width: 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+    }
+
+    .contact-card:hover {
+      border-color: rgba(255,255,255,0.20);
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-2px);
+    }
+
+    .notice-box {
+      background: rgba(16,185,129,0.10);
+      border: 1px solid rgba(52,211,153,0.22);
+    }
+
+    *:focus-visible {
+      outline: 2px solid rgb(52 211 153);
+      outline-offset: 2px;
+      border-radius: 0.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .container-pad {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .hero-title {
+        font-size: clamp(2.35rem, 12vw, 3.5rem);
+        line-height: 1.05;
+      }
+
+      .mobile-full {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="bg-slate-950 text-white antialiased">
+  <div class="pointer-events-none fixed inset-0 -z-20 bg-slate-950" aria-hidden="true"></div>
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.18),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.13),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(20,184,166,0.12),transparent_28%)]" aria-hidden="true"></div>
 
-  <!-- Header -->
-  <header class="border-b border-white/10">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-400 text-slate-950 font-black">
-          L
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl" role="banner">
+    <div class="container-pad mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
+      <a href="index.html" class="group flex min-w-0 items-center gap-3" aria-label="LockLink Home">
+        <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-300 to-teal-500 text-slate-950 shadow-lg shadow-emerald-950/40 transition-transform group-hover:scale-105">
+          <span class="text-lg font-black" aria-hidden="true">L</span>
+          <span class="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-slate-950 bg-white" aria-hidden="true"></span>
         </div>
-        <span class="text-xl font-bold tracking-tight">LockLink</span>
+
+        <div class="min-w-0 leading-none">
+          <div class="text-xl font-black tracking-tight">
+            Lock<span class="text-emerald-300">Link</span>
+          </div>
+          <div class="mt-1 hidden text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500 sm:block">
+            Secure Delivery
+          </div>
+        </div>
       </a>
 
-      <a href="index.html" class="rounded-full border border-white/15 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
-        Back home
-      </a>
+      <nav class="flex items-center gap-5 text-sm font-semibold text-slate-300" role="navigation" aria-label="Page navigation">
+        <a href="index.html" class="transition hover:text-white">Home</a>
+        <a href="privacy.html" class="hidden transition hover:text-white sm:inline">Privacy</a>
+        <a href="terms.html" class="hidden transition hover:text-white sm:inline">Terms</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Content -->
-  <main class="mx-auto max-w-5xl px-6 py-20">
-    <div class="mb-12 max-w-3xl">
-      <p class="mb-3 text-sm font-bold uppercase tracking-widest text-emerald-300">Contact</p>
-      <h1 class="text-4xl font-black tracking-tight md:text-5xl">Get in touch with LockLink.</h1>
-      <p class="mt-5 text-lg leading-8 text-slate-300">
-        LockLink is currently preparing for launch. For early access, partnership inquiries, or support questions, you can contact us directly.
-      </p>
-    </div>
+  <main>
+    <section class="relative overflow-hidden border-b border-white/10">
+      <div class="soft-grid absolute inset-0 -z-10 opacity-70" aria-hidden="true"></div>
 
-    <div class="grid gap-8 lg:grid-cols-2">
-
-      <!-- Contact Card -->
-      <section class="rounded-3xl border border-white/10 bg-white/5 p-8">
-        <h2 class="text-2xl font-bold">Contact details</h2>
-
-        <div class="mt-8 space-y-6">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">Email</p>
-            <a href="mailto:support@locklink.net" class="mt-2 block text-xl font-bold text-emerald-300 hover:text-emerald-200">
-              support@locklink.net
-            </a>
+      <div class="container-pad mx-auto max-w-7xl px-6 py-20 md:py-24">
+        <div class="max-w-4xl">
+          <div class="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-4 py-2 text-sm font-bold text-emerald-300">
+            <span class="h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span>
+            Contact LockLink
           </div>
 
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">Website</p>
-            <a href="https://locklink.net" class="mt-2 block text-xl font-bold text-emerald-300 hover:text-emerald-200">
-              locklink.net
-            </a>
-          </div>
+          <h1 class="hero-title text-5xl font-black leading-[1.02] tracking-tight md:text-6xl">
+            Get in touch with LockLink.
+          </h1>
 
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">Status</p>
-            <p class="mt-2 text-xl font-bold">Coming soon</p>
-          </div>
-        </div>
-      </section>
+          <p class="mt-7 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+            Contact us for early access, support, abuse reports, payment-provider inquiries, or business questions related to private pay-to-unlock digital delivery.
+          </p>
 
-      <!-- Message Card -->
-      <section class="rounded-3xl border border-white/10 bg-white/5 p-8">
-        <h2 class="text-2xl font-bold">Send a message</h2>
-
-        <p class="mt-4 leading-7 text-slate-400">
-          Use the button below to email LockLink directly. A full contact form will be available after launch.
-        </p>
-
-        <div class="mt-8">
-          <a
-            href="mailto:support@locklink.net?subject=LockLink%20Inquiry"
-            class="inline-flex rounded-full bg-emerald-400 px-8 py-4 font-bold text-slate-950 transition hover:bg-emerald-300"
-          >
-            Email LockLink
-          </a>
-        </div>
-
-        <div class="mt-10 rounded-2xl border border-white/10 bg-slate-950 p-5">
-          <p class="text-sm leading-7 text-slate-400">
-            For Lemon Squeezy verification, this website represents the official online presence of LockLink,
-            a secure digital delivery platform for freelancers, creators, and digital service providers.
+          <p class="mt-5 max-w-3xl text-sm leading-6 text-slate-500">
+            LockLink provides technical delivery infrastructure only. LockLink is not an escrow service, dispute-resolution service, buyer protection service, or public marketplace.
           </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </div>
+    <section class="container-pad mx-auto max-w-7xl px-6 py-14 md:py-20">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <article class="contact-card rounded-[2rem] p-7 md:p-8">
+          <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400 text-xl font-black text-slate-950">
+            @
+          </div>
+
+          <h2 class="text-2xl font-black tracking-tight">General support</h2>
+
+          <p class="mt-4 leading-7 text-slate-400">
+            For website questions, early access, product updates, or general LockLink support.
+          </p>
+
+          <a href="mailto:support@locklink.net?subject=LockLink%20Support%20Request" class="mt-6 block break-words text-lg font-black text-emerald-300 transition hover:text-white">
+            support@locklink.net
+          </a>
+        </article>
+
+        <article class="contact-card rounded-[2rem] p-7 md:p-8">
+          <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400 text-xl font-black text-slate-950">
+            !
+          </div>
+
+          <h2 class="text-2xl font-black tracking-tight">Abuse reports</h2>
+
+          <p class="mt-4 leading-7 text-slate-400">
+            Report suspected illegal content, malware, rights violations, fraud, unsafe files, or misuse of private delivery links.
+          </p>
+
+          <a href="mailto:support@locklink.net?subject=LockLink%20Abuse%20Report" class="mt-6 block break-words text-lg font-black text-emerald-300 transition hover:text-white">
+            Report abuse
+          </a>
+        </article>
+
+        <article class="contact-card rounded-[2rem] p-7 md:p-8">
+          <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400 text-xl font-black text-slate-950">
+            ↗
+          </div>
+
+          <h2 class="text-2xl font-black tracking-tight">Business inquiries</h2>
+
+          <p class="mt-4 leading-7 text-slate-400">
+            For payment-provider reviews, partnership requests, verification, or business-related questions.
+          </p>
+
+          <a href="mailto:support@locklink.net?subject=LockLink%20Business%20Inquiry" class="mt-6 block break-words text-lg font-black text-emerald-300 transition hover:text-white">
+            Business inquiry
+          </a>
+        </article>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+        <section class="glass rounded-[2rem] p-7 md:p-8">
+          <h2 class="text-2xl font-black tracking-tight">Contact details</h2>
+
+          <div class="mt-8 space-y-6">
+            <div>
+              <p class="text-sm font-black uppercase tracking-widest text-slate-500">Email</p>
+              <a href="mailto:support@locklink.net" class="mt-2 block break-words text-xl font-black text-emerald-300 transition hover:text-white">
+                support@locklink.net
+              </a>
+            </div>
+
+            <div>
+              <p class="text-sm font-black uppercase tracking-widest text-slate-500">Website</p>
+              <a href="https://locklink.net" class="mt-2 block break-words text-xl font-black text-emerald-300 transition hover:text-white">
+                locklink.net
+              </a>
+            </div>
+
+            <div>
+              <p class="text-sm font-black uppercase tracking-widest text-slate-500">Product status</p>
+              <p class="mt-2 text-xl font-black text-white">Preparing for launch</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-8">
+          <h2 class="text-2xl font-black tracking-tight">Send a message</h2>
+
+          <p class="mt-4 leading-8 text-slate-400">
+            A full contact form may be added after launch. For now, use email so your message goes directly to the LockLink team.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="mailto:support@locklink.net?subject=LockLink%20Inquiry"
+              class="mobile-full inline-flex justify-center rounded-full bg-emerald-400 px-8 py-4 text-center font-black text-slate-950 transition hover:bg-emerald-300"
+            >
+              Email LockLink
+            </a>
+
+            <a
+              href="index.html#early-access"
+              class="mobile-full inline-flex justify-center rounded-full border border-white/15 bg-white/5 px-8 py-4 text-center font-black text-white transition hover:bg-white/10"
+            >
+              Join early access
+            </a>
+          </div>
+
+          <div class="notice-box mt-10 rounded-3xl p-5">
+            <h3 class="font-black text-white">For abuse reports</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-300">
+              Please include the private link or deal reference if available, a clear explanation of the issue, and any relevant evidence. LockLink may review and restrict content or access when needed for safety, legal compliance, or Terms enforcement.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <section class="mt-10 rounded-[2rem] border border-white/10 bg-slate-900/70 p-7 md:p-8">
+        <h2 class="text-2xl font-black tracking-tight">Platform position</h2>
+        <p class="mt-4 max-w-5xl leading-8 text-slate-300">
+          LockLink is designed for private digital delivery between sellers and buyers who already agreed on the work outside the platform. LockLink provides the technical delivery layer: private link, protected preview, payment-confirmed unlock, and controlled download access.
+        </p>
+        <p class="mt-4 max-w-5xl leading-8 text-slate-400">
+          LockLink does not guarantee file quality, seller performance, buyer behavior, refunds, chargeback outcomes, legal compliance of uploaded content, or the private agreement between seller and buyer.
+        </p>
+      </section>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-white/10 py-10">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
+  <footer class="border-t border-white/10 py-10" role="contentinfo">
+    <div class="container-pad mx-auto flex max-w-7xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
       <div>
-        <p class="font-bold">LockLink</p>
-        <p class="mt-1 text-sm text-slate-500">Secure pay-to-unlock digital delivery.</p>
+        <div class="text-lg font-black tracking-tight">
+          Lock<span class="text-emerald-300">Link</span>
+        </div>
+        <p class="mt-1 text-sm text-slate-500">
+          Private pay-to-unlock digital delivery.
+        </p>
       </div>
 
-      <div class="flex flex-wrap gap-5 text-sm text-slate-400">
-        <a href="index.html" class="hover:text-white">Home</a>
-        <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
-        <a href="terms.html" class="hover:text-white">Terms of Service</a>
-      </div>
+      <nav class="flex flex-wrap gap-5 text-sm text-slate-400" role="navigation" aria-label="Footer navigation">
+        <a href="index.html" class="transition hover:text-white">Home</a>
+        <a href="privacy.html" class="transition hover:text-white">Privacy Policy</a>
+        <a href="terms.html" class="transition hover:text-white">Terms of Service</a>
+        <a href="contact.html" class="text-emerald-300 transition hover:text-white">Contact</a>
+      </nav>
     </div>
   </footer>
-
 </body>
 </html>
